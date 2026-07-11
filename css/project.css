@@ -1,0 +1,329 @@
+/* === Layout === */
+main {
+    padding: 25px;
+    max-width: 90vw;
+    margin: auto;
+}
+
+/* === Typography Standards === */
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 600;
+    color: var(--color-primary-light);
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.4em;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    color: var(--color-primary-light);
+}
+
+/* === Title & Tags Bar === */
+.tags-title-container {
+    display: flex;
+    align-items: center;
+    margin: -10px 0 20px;
+    color: var(--color-primary-light);
+}
+
+.tags-title-container span:first-child {
+    font-size: 64px;
+    margin-right: 10px;
+    color: var(--color-accent);
+}
+
+.tags-title-container span:last-child {
+    flex-grow: 1;
+    height: 8px;
+    background-color: currentColor;
+    color: var(--color-accent);
+    margin-left: 20px;
+}
+
+/* === Section Title Bar (H3) === */
+.section-title-container {
+    display: flex;
+    align-items: center;
+    margin: 0px 0 20px;
+}
+
+.section-title-container span:first-child {
+    font-size: 64px;
+    margin-right: 10px;
+    color: var(--color-accent);
+}
+
+.section-title-container h3 {
+    font-size: 1.75em;
+    letter-spacing: 1px;
+    margin-right: auto;
+    color: var(--color-primary-light);
+    font-weight: 600;
+}
+
+.section-title-container span:last-child {
+    flex-grow: 1;
+    height: 8px;
+    background-color: currentColor;
+    margin-left: 20px;
+    color: var(--color-accent);
+}
+
+/* === Image Section === */
+.image-container {
+    margin-bottom: 30px;
+    min-width: 150%;
+}
+
+/* === Carousel === */
+.carousel-images {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-images::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    padding-right: 10px;
+}
+
+.carousel-item:last-child {
+    padding-right: 0;
+}
+
+.carousel-item img {
+    display: block;
+    width: 55%;
+    transform: translateX(10%);
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control {
+    position: absolute;
+    top: 60%;
+    font-size: 4em;
+    color: #fff;
+    background: var(--color-primary-light);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+}
+
+.carousel-control:hover {
+    opacity: 1;
+}
+
+.carousel-control.prev {
+    left: 13%;
+}
+
+.carousel-control.next {
+    right: 14%;
+}
+
+/* === Project Exposition === */
+.project-exposition {
+    padding: 20px 30px;
+    background-color: var(--color-text);
+    border-radius: 10px;
+    color: var(--color-grey-light);
+    font-size: 1.1em;
+    margin: 25px;
+    opacity: 98%;
+}
+
+.project-exposition .project-description {
+    font-size: 1.2em;
+    line-height: 1.75;
+    color: var(--color-bg);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* === Tags List === */
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.tag-item {
+    background-color: var(--color-accent);
+    color: white;
+    padding: 6px 14px;
+    font-weight: 500;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.tag-item a {
+    color: var(--color-grey-light);
+    text-decoration: none;
+}
+
+.tag-item:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.tag-item:hover a {
+    color: var(--color-text);
+    text-decoration: underline;
+}
+
+/* === Project Sections === */
+.project-sections {
+    padding: 0 20px 20px;
+    border-radius: 5px;
+    opacity: 0.95;
+}
+
+.project-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.project-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.section-content {
+    flex: 1 1 300px;
+}
+
+.section-content p {
+    padding: 0 20px 20px;
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: var(--color-bg);
+}
+
+.section-image {
+    text-align: center;
+}
+
+.section-image img {
+    width: auto;
+    height: auto;
+    object-fit: fill;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+/* === Socials Bar === */
+.socials-bar {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.socials-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+.socials-bar li {
+    display: inline;
+}
+
+.socials-bar li a {
+    text-decoration: none;
+    color: var(--color-accent);
+    padding: 8px 12px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.socials-bar li a:hover {
+    color: var(--color-grey-light);
+    transform: scale(1.2);
+    border-radius: 5px;
+}
+
+.socials-bar span {
+    color: var(--color-primary-light);
+    margin: 0 15px;
+    font-size: 48px;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-item {
+        flex-direction: column;
+    }
+
+    .image-container {
+        margin-bottom: 15px;
+    }
+
+    .project-section {
+        flex-direction: column;
+    }
+
+    .section-image,
+    .section-content {
+        flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .project-item {
+        flex-direction: column;
+    }
+
+    .tags-title-container span:first-child {
+        font-size: 56px;
+    }
+
+    .tags-title-container h1 {
+        font-size: 40px;
+    }
+}
+
+/* === Temporary: Hide Search and Filter Navigation === */
+#name-search,
+.filters {
+    display: none;
+}

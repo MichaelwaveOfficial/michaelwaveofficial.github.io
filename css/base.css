@@ -1,0 +1,126 @@
+/* Root colour variables for inheritance. */
+:root {
+    /* Primary Brand Palette */
+    --color-primary-dark: #004146;
+    --color-primary: #018076;
+    --color-primary-light: #03BFB5;
+
+    /* Greyscale for background/UI */
+    --color-grey-dark: #949398;
+    --color-grey-light: #EFF5F9;
+
+    /* Accent & Alert */
+    --color-accent: #80142B;
+
+    /* Neutral */
+    --color-black: #0f0f0f;
+    --color-bg: #FFFFFF;
+    --color-dark-bg: #343a40;
+    --color-text: #1b1b1b;
+}
+
+/* Base resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-weight: 500;
+    min-height: 100vh;
+}
+
+/* Typography elements */
+h1, h2, h3 {
+    color: var(--color-primary-light);
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Background canvas setup */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+
+main {
+    padding: 25px 20px;
+    max-width: 95%;
+    margin: 5vh auto;
+}
+
+/* Site Nav Menu */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-text);
+    padding: 20px 30px;
+    z-index: 1000;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.index-link {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--color-primary-light);
+}
+
+.nav-group-container {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    min-width: 250px;
+}
+
+#name-search {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--color-primary-light);
+    border: 2px solid var(--color-primary-dark);
+    border-radius: 6px;
+    font-size: 16px;
+    color: var(--color-black);
+    font-weight: 600;
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .nav-group-container {
+        width: 100%;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+}
